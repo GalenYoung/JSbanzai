@@ -1,0 +1,65 @@
+@charset "utf-8";
+
+@import url("./sal-common.less");
+
+/* reset start*/
+* { .reset() };
+/* reset end */
+
+/* common style start */
+li{
+	list-style: none;
+}
+a{
+	color:#000;
+	text-decoration:none;
+	&:hover{
+		.tran-hover;
+	}
+}
+p{
+    margin: 0;
+}
+/* common style end */
+
+/* header start */
+.header{
+	width:100%;
+	height:50px;
+	border-bottom: 1px solid #eee;
+	position:relative;
+	text-align: right;
+	ul{
+		height:100%;
+		margin-right:20px;
+		li{
+			display: inline-block;
+			height:100%;
+			font:normal 400 18px/50px "Agency FB",STXingkai,KaiTi;		
+			margin: 0 18px;
+			a {
+				color:#4296DB;	
+				&:hover{
+					color:#E91E63;
+				}
+			}
+		}
+	}
+}
+/* header end */
+
+/* footer start */
+.footer {
+	height: 80px;
+	border-top: 1px solid #eee;
+	padding-bottom: 20px;
+	font: normal 400 16px/80px "Agency FB", STXingkai, KaiTi;
+	color: #888;
+
+	p {
+		text-align: center;
+	}
+	a {
+		color: #666;
+	}
+}

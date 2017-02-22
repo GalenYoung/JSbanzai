@@ -1,0 +1,35 @@
+@charset "utf-8";
+@import url("./../public/sal-common.less");
+
+.content{
+	width:50%;
+	margin:4% auto;
+	li{
+		list-style: none;
+		padding-left:10px;
+		a{
+			color:#4296DB;
+			font:normal 400 22px/50px "Agency FB",STXingkai,KaiTi;
+			.sal-date-mark{
+				font-size: 14px;
+				line-height: 16px;
+				height: 16px;
+				color:#4296DB;
+				display: inline-block;
+				border:1px solid #e1e1e1;
+				padding:4px;
+				margin-left: 10px;
+				border-radius:0 10px 0 ;
+			};
+			&:hover{
+				color:#E91E63;
+			};
+			&:hover .sal-date-mark{
+				background-color:#E91E63;
+				color:#fff;
+				.tran-hover;
+			}
+
+		}
+	}
+}

@@ -1,0 +1,77 @@
+@charset "utf-8";
+/**********************************************************
+ * 重置样式
+ * 使用方法
+ * 		在 * { .reset() };即可
+*/
+/*************************************************************
+ * 清除浮动
+ * 使用方法 - 在要使用的父元素样式内包括 .clearfix 即可
+ * .wrap{
+ * 	   .clearfix;
+ * }
+ * 编译后
+ * .wrap:after{
+ 		content: '';
+		display: block;
+		height: 0;
+		width: 0;
+		clear:both;
+		visibility: hidden;
+	}
+ */
+/*************************************************************
+ * 圆形
+ * 兼容到IE9+;
+ * diameter - 直径
+ */
+/**************************************************************
+ * 三角形
+ * @hemline - 底边长度
+ * @color - 颜色
+ * 使用方法：
+ * .sanjiao{
+		.trangle(bottom,@color:red,@hemline:100px);
+	}
+ */
+/**********************************************************
+ * 盒子相对于浏览器视口上下左右居中
+ */
+/* variable start */
+/* variable end */
+.content {
+  width: 50%;
+  margin: 4% auto;
+}
+.content li {
+  list-style: none;
+  padding-left: 10px;
+}
+.content li a {
+  color: #4296DB;
+  font: normal 400 22px/50px "Agency FB", STXingkai, KaiTi;
+}
+.content li a .sal-date-mark {
+  font-size: 14px;
+  line-height: 16px;
+  height: 16px;
+  color: #4296DB;
+  display: inline-block;
+  border: 1px solid #e1e1e1;
+  padding: 4px;
+  margin-left: 10px;
+  border-radius: 0 10px 0 ;
+}
+.content li a:hover {
+  color: #E91E63;
+}
+.content li a:hover .sal-date-mark {
+  background-color: #E91E63;
+  color: #fff;
+  transiton: 0.5s all;
+  -webkit-transition: 0.5s all;
+  -moz-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  -ms-transition: 0.5s all;
+}
+/*# sourceMappingURL=index.css.map */

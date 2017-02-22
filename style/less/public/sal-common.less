@@ -1,0 +1,136 @@
+@charset 'utf-8';
+
+// 引入方式 @import url(./sal.less);
+
+/**********************************************************
+ * 重置样式
+ * 使用方法
+ * 		在 * { .reset() };即可
+*/
+.reset(){
+	margin 	: 0 ;
+	padding : 0 ;
+	border  : 0 ;
+	outline : 0 ;
+	&:focus{ outline: 0 };
+	box-sizing: border-box ; 
+	font-family: "Microsoft YaHei";
+	font-size: 16px;
+
+	ol,ul{
+		list-style: none;
+	}
+	a{
+		text-decoration: none;
+	}
+	a img, :link img, :visited img {
+	   border: 0 ;
+	} 
+	table {
+		border-collapse: collapse;
+		border-spacing: 0;
+	}
+	//html5
+	header,main,section, footer, aside, nav, article, figure{
+		display: block;
+	}
+}
+
+/*************************************************************
+ * 清除浮动
+ * 使用方法 - 在要使用的父元素样式内包括 .clearfix 即可
+ * .wrap{
+ * 	   .clearfix;
+ * }
+ * 编译后
+ * .wrap:after{
+ 		content: '';
+		display: block;
+		height: 0;
+		width: 0;
+		clear:both;
+		visibility: hidden;
+	}
+ */
+.clearfix(@clear:both){
+	&:after{
+		content: '';
+		display: block;
+		height: 0;
+		line-height: 0;
+		width: 0;
+		clear:@clear;
+		visibility: hidden;
+	}
+}
+
+/*************************************************************
+ * 圆形
+ * 兼容到IE9+;
+ * diameter - 直径
+ */
+.round(@diameter){
+	height: @diameter;
+	width: @diameter;
+	border-radius: @diameter/2;
+}
+/**************************************************************
+ * 三角形
+ * @hemline - 底边长度
+ * @color - 颜色
+ * 使用方法：
+ * .sanjiao{
+		.trangle(bottom,@color:red,@hemline:100px);
+	}
+ */
+
+//通用样式
+.trangle(@_,@hemline,@color){
+	height:0px;
+	width:0px;
+	overflow:hidden;
+	border-style:solid;
+	border-width: @hemline/2;
+}
+
+//方向向下
+.trangle(bottom,@hemline,@color){
+	border-color: @color transparent transparent transparent;
+}
+
+//方向向上
+.trangle(top,@hemline,@color){
+	border-color:transparent transparent @color transparent;
+}
+
+//方向向右
+.trangle(right,@hemline,@color){
+	border-color:transparent transparent transparent @color;
+}
+
+//方向向左
+.trangle(left,@hemline,@color){
+	border-color:transparent @color transparent transparent;
+}
+
+/**********************************************************
+ * 盒子相对于浏览器视口上下左右居中
+ */
+.box-center(@pos:fixed){
+	position: @pos ;
+	top: 50% ;
+	left: 50% ;
+			transform: translate(-50%,-50%);
+		-ms-transform: translate(-50%,-50%);
+	-webkit-transform: translate(-50%,-50%);
+}
+
+/* variable start */
+.tran-hover(@timer:0.5s){
+		 transiton: @timer all;
+-webkit-transition: @timer all;
+	   -moz-transition: @timer all;
+     -o-transition: @timer all;
+    -ms-transition: @timer all;
+}
+/* variable end */
