@@ -1,13 +1,17 @@
 var express = require("express");
+var path = require('path');
+var routes = require('./routes/routes');
 var app = express();
 
-app.get("",function(req,res){
-	res.send("hello world!");
-});
+app.set('views/**/', path.join(__dirname, 'views'));
+app.set('view engine', 'jade');
 
-var server = app.listen(3000,function(){
+app.use(express.static('public'));
+app.use('/', routes)
+
+var server = app.listen(8080,function(){
 	var host = server.address().address;
 	var port = server.address().port;
 
-	console.log('Example app listening at http://%s:%s', host, port);
+	console.log('listening at http://%s:%s', host, port);
 });
