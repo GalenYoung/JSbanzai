@@ -2,9 +2,9 @@ doctype
 html(lang="zh-cmn-Hans")
 	head
 		script.
-			window.detailID = "#{detailID}"; 
+			window.detailID = #{detailID}; 
 		include ./../public/head.jade
-		title detail 文章01
+		title detail 文章02
 		link(rel="stylesheet", href="./../../style/css/detail/detail.css")
 	body
 		include ./../public/header.jade
@@ -52,11 +52,10 @@ html(lang="zh-cmn-Hans")
 				<br> cuz baby girl I’m coming back home
 		
 		section
-			ul.users#users
-				-for(var i = 0 ;i < 3 ; i++)
-					li
-						.user 
-						.user-cont 
+			ul.users
+				li
+					.user 
+					.user-cont 
 
 		form(accept-charset="utf-8",name="comment",class="comment")
 			textarea(id="comment_box")
