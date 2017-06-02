@@ -3,7 +3,8 @@ login = {
 		this.doms = {
 			unlogin : $('#unlogin'),
 			login	: $('#login'),
-			username: $("#username")
+			username: $("#username"),
+			logout	: $("#logout")
 		}
 	},
 	checkLogin:function(){
@@ -16,6 +17,10 @@ login = {
 			doms.username.text(username_value);
 		}
 	},
+	logoff:function(){
+		SAL_cookie.delete("username");
+		document.location.reload();
+	},
 	init:function(){
 		this.getDoms();
 		this.checkLogin();
@@ -24,4 +29,7 @@ login = {
 
 $(function(){
 	login.init();
+	login.doms.logout.click(function(){
+		login.logoff();
+	});
 });

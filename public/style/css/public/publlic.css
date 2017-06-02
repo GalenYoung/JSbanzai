@@ -126,12 +126,28 @@ p {
   height: 100%;
   width: 200px;
   float: right;
+  display: none;
   text-align: center;
 }
-.header .login span.username {
+.header .login .username {
   height: 50px;
   color: #4296DB;
   font: normal 400 22px/50px "Agency FB", STXingkai, KaiTi;
+}
+.header .login .select-list {
+  display: none;
+  height: 50px;
+  color: #4296DB;
+  font: normal 400 22px/50px "Agency FB", STXingkai, KaiTi;
+  border: 1px solid #eee;
+  border-top: none;
+}
+.header .login .select-list:hover {
+  color: #E91E63;
+  cursor: pointer;
+}
+.header .login:hover .select-list {
+  display: block;
 }
 /* header end */
 /* footer start */

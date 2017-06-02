@@ -49,11 +49,25 @@ p{
 		height:100%;
 		width:200px;
 		float: right;
+		display: none;
 		text-align: center;
-		span.username{
+		.username{
 			height:50px;
-			    color: #4296DB;
-    			font: normal 400 22px/50px "Agency FB", STXingkai, KaiTi; 
+		    color: #4296DB;
+			font: normal 400 22px/50px "Agency FB", STXingkai, KaiTi; 
+		}
+		.select-list{
+			display: none;
+			.username;
+			border:1px solid #eee;
+			border-top:none;
+			&:hover{
+				color: #E91E63;
+				cursor: pointer;
+			}
+		}
+		&:hover .select-list{
+			display: block;
 		}
 	}
 }

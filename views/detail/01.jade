@@ -51,12 +51,14 @@ html(lang="zh-cmn-Hans")
 				<br> 你的爱 是最蓝那片天空
 				<br> cuz baby girl I’m coming back home
 		
-		section
+		section 
 			ul.users#users
-				-for(var i = 0 ;i < 3 ; i++)
+				each comment in comments	
 					li
-						.user 
-						.user-cont 
+						.user #{comment.username}
+						.use-cont= comment.comment
+			
+			
 
 		form(accept-charset="utf-8",name="comment",class="comment")
 			textarea(id="comment_box")

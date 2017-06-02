@@ -1,1 +1,4 @@
-[{"username":"aaa","pwd":"bbb"},{"username":"aa","pwd":"bb"},{"username":"a","pwd":"b"},{"username":"111","pwd":"222"},{"username":"1111","pwd":"2222"},{"username":"abc","pwd":"111"},{"username":"11","pwd":"11"}]
+[
+	{"username":"abc","pwd":"123","uid":"0001","join_date":"2017-03-07T08:37:33.542Z"},
+	{"username":"abcd","pwd":"1234","uid":"0002","join_date":"2017-03-07T08:38:09.646Z"}
+]
