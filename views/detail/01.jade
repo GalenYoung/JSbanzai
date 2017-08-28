@@ -3,6 +3,8 @@ html(lang="zh-cmn-Hans")
 	head
 		script.
 			window.detailID = "#{detailID}"; 
+			window.detailComments = !{detailComments};
+			//-window.detailComments = #{detailComments}; 这种写法会被编译
 		include ./../public/head.jade
 		title detail 文章01
 		link(rel="stylesheet", href="./../../style/css/detail/detail.css")
@@ -53,11 +55,10 @@ html(lang="zh-cmn-Hans")
 		
 		section
 			ul.users#users
-				-for(var i = 0 ;i < 3 ; i++)
-					li
-						.user 
-						.user-cont 
-
+				- each obj in !{detailComments}
+					li=obj
+						//- .user= obj.username
+						//- .user-cont= obj.comment 
 		form(accept-charset="utf-8",name="comment",class="comment")
 			textarea(id="comment_box")
 			input(type="button",name="submit",value="评论",id="submit" class="submit")
