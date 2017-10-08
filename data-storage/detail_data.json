@@ -1,55 +1,42 @@
 {
     "detailID": {
-        "comments": [
-            {
-                "username": "username1",
-                "comment": "lalalalalallalalalala"
-            },
-            {
-                "username": "username2",
-                "comment": "lalalalalallalalalala"
-            }
-        ],
+        "comments": [{
+            "username": "username1",
+            "comment": "lalalalalallalalalala"
+        }, {
+            "username": "username2",
+            "comment": "lalalalalallalalalala"
+        }],
         "detailCont": "XXXXXXXXXXXXXXXXXXX"
     },
     "01": {
-        "comments": [
-            {
-                "username": "123",
-                "comment": "1uuuuuujjjm"
-            },
-            {
-                "username": "123",
-                "comment": "1uuuu"
-            },
-            {
-                "username": "123",
-                "comment": "1"
-            },
-            {
-                "username": "123",
-                "comment": "1"
-            },
-            {
-                "username": "11",
-                "comment": "1111"
-            },
-            {
-                "username": "11",
-                "comment": "1111"
-            },
-            {
-                "username": "aaa",
-                "comment": "哈哈哈"
-            },
-            {
-                "username": "aaa",
-                "comment": "grg中文\n"
-            },
-            {
-                "username": "aaa",
-                "comment": "grg中文\n"
-            }
-        ]
+        "comments": [{
+            "username": "123",
+            "comment": "1uuuuuujjjm"
+        }, {
+            "username": "123",
+            "comment": "1uuuu"
+        }, {
+            "username": "123",
+            "comment": "1"
+        }, {
+            "username": "123",
+            "comment": "1"
+        }, {
+            "username": "11",
+            "comment": "1111"
+        }, {
+            "username": "11",
+            "comment": "1111"
+        }, {
+            "username": "aaa",
+            "comment": "哈哈哈"
+        }, {
+            "username": "aaa",
+            "comment": "grg中文\n"
+        }, {
+            "username": "aaa",
+            "comment": "grg中文\n"
+        }]
     }
 }
